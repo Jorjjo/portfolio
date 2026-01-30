@@ -5,6 +5,7 @@ import { Container } from '../../../components/Container';
 import styled from 'styled-components';
 import { theme } from '../../../styles/Theme';
 import { Socials } from '../../../components/mainSection/Socials';
+import { SectionTitle } from '../../../components/SectionTitle';
 
 export function Main() {
     return (
@@ -12,9 +13,9 @@ export function Main() {
             <Container>
                 <FlexWrapper justify='space-between' align='center'>
                     <MainContent>
-                        <h2>Hello I’am <span>Flora Sheen.</span></h2>
+                        <SectionTitle color='black'>Hello I’am <b>Flora Sheen.</b></SectionTitle>
                         <MainTitle>Frontend <span>Developer</span></MainTitle>
-                        <h2>Based In <span>India</span>.</h2>
+                        <SectionTitle color='black'>Based In <b>India</b>.</SectionTitle>
                         <p>
                             I'm Flora Sheen Lorem Ipsum is simply dummy text of
                             the printing and typesetting industry. Lorem Ipsum
@@ -38,7 +39,6 @@ export function Main() {
 
 const StyledMain = styled.section`
     background-color: ${() => theme.colors.primary.primaryBg};
-    padding: 60px 0;
 `;
 
 const MainContent = styled.div`

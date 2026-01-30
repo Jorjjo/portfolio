@@ -8,13 +8,15 @@ import { Container } from '../../components/Container';
 import { FlexWrapper } from '../../components/FlexWrapper';
 import { theme } from '../../styles/Theme';
 
+const items = ['About Me', 'Skills', 'Projects', 'Contact Me']
+
 export function Header() {
     return (
         <StyledHeader>
             <Container>
                 <FlexWrapper justify='space-between' align='center'>
                     <Logo />
-                    <Menu />
+                    <Menu menuItems={items}/>
                     <StyledBtn as={'a'} btnSize='md'>
                         <FlexWrapper gap='8px'>
                             <span>Resume</span>

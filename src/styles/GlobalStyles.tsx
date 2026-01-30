@@ -91,4 +91,8 @@ h3,
 h4 {
     font-weight: inherit;
 }
+
+section {
+    padding: 60px 0;
+}
 `;

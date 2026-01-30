@@ -1,22 +1,21 @@
 import React from 'react';
 import styled from 'styled-components';
 
-export function Menu() {
+type MenuPropsType = {
+    menuItems: Array<string>;
+};
+
+export function Menu(props: MenuPropsType) {
     return (
         <StyledMenu>
             <ul>
-                <li>
-                    <a href=''>About Me</a>
-                </li>
-                <li>
-                    <a href=''>Skills</a>
-                </li>
-                <li>
-                    <a href=''>Projects</a>
-                </li>
-                <li>
-                    <a href=''>Contact Me</a>
-                </li>
+                {props.menuItems.map((item, index) => {
+                    return (
+                        <li key={index}>
+                            <a href=''>{item}</a>
+                        </li>
+                    );
+                })}
             </ul>
         </StyledMenu>
     );
