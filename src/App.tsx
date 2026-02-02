@@ -5,6 +5,9 @@ import { Skills } from './layout/header/sections/skills/Skills';
 import { Experience } from './layout/header/sections/experience/Experience';
 import { AboutMe } from './layout/header/sections/aboutMe/AboutMe';
 import { Projects } from './layout/header/sections/projects/Projects';
+import { Testimonials } from './layout/header/sections/testimonials/Testimonials';
+import { Contacts } from './layout/header/sections/contacts/Contacts';
+import { Footer } from './layout/header/Footer';
 
 function App() {
     return (
@@ -15,6 +18,9 @@ function App() {
            <Experience/>
            <AboutMe/>
            <Projects/>
+           <Testimonials/>
+           <Contacts/>
+           <Footer/>
         </div>
     )
 }

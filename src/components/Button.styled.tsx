@@ -8,6 +8,7 @@ export const StyledBtn = styled.button<StyledBtnPropsType>`
     border: 2px solid;
     border-radius: 4px;
     line-height: 1.2;
+    letter-spacing: 0.035em;
 
     ${(props) =>
         props.btnSize === 'md' &&

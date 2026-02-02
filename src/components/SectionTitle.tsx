@@ -8,4 +8,5 @@ export const SectionTitle = styled.h2<SectionTitlePropsType>`
     color: ${(props) => (props.color)};
     font-size: 48px;
     letter-spacing: -0.035em;
+    line-height: 1.4;
 `

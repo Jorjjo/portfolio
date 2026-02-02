@@ -13,9 +13,15 @@ export function Main() {
             <Container>
                 <FlexWrapper justify='space-between' align='center'>
                     <MainContent>
-                        <SectionTitle color='black'>Hello I’am <b>Flora Sheen.</b></SectionTitle>
-                        <MainTitle>Frontend <span>Developer</span></MainTitle>
-                        <SectionTitle color='black'>Based In <b>India</b>.</SectionTitle>
+                        <SectionTitle color='black'>
+                            Hello I’am <b>Flora Sheen.</b>
+                        </SectionTitle>
+                        <MainTitle>
+                            Frontend <span>Developer</span>
+                        </MainTitle>
+                        <SectionTitle color='black'>
+                            Based In <b>India</b>.
+                        </SectionTitle>
                         <p>
                             I'm Flora Sheen Lorem Ipsum is simply dummy text of
                             the printing and typesetting industry. Lorem Ipsum
@@ -23,7 +29,7 @@ export function Main() {
                             since the 1500s, when an unknown printer took a
                             galley of type and scrambled it to specimen book.
                         </p>
-                        <Socials/>
+                        <Socials gap='32px'/>
                     </MainContent>
                     <Icon
                         iconId='banner'
@@ -53,4 +59,4 @@ const MainTitle = styled.h1`
     font-size: 48px;
     font-weight: 800;
     letter-spacing: -0.035em;
-`
+`;

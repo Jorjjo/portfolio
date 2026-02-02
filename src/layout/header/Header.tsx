@@ -15,7 +15,7 @@ export function Header() {
         <StyledHeader>
             <Container>
                 <FlexWrapper justify='space-between' align='center'>
-                    <Logo />
+                    <Logo fill='black'/>
                     <Menu menuItems={items}/>
                     <StyledBtn as={'a'} btnSize='md'>
                         <FlexWrapper gap='8px'>

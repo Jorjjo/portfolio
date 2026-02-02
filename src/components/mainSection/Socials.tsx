@@ -1,11 +1,15 @@
 import React from 'react';
-import { FlexWrapper } from '../FlexWrapper';
 import { StyledBtn } from '../Button.styled';
 import { Icon } from '../icon/Icon';
+import { FlexWrapper } from '../FlexWrapper';
 
-export function Socials() {
+type SocialsPropsType = {
+    gap: string
+}
+
+export function Socials(props:SocialsPropsType) {
     return (
-        <FlexWrapper gap='32px'>
+        <FlexWrapper gap={props.gap}>
             <StyledBtn btnSize='square'>
                 <Icon
                     iconId='discord'
@@ -16,7 +20,7 @@ export function Socials() {
             </StyledBtn>
             <StyledBtn btnSize='square'>
                 <Icon
-                    iconId='discord'
+                    iconId='reddit'
                     width='20'
                     height='20'
                     viewBox='0 0 20 20'
@@ -41,3 +45,4 @@ export function Socials() {
         </FlexWrapper>
     );
 }
+

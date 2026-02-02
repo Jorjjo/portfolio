@@ -26,4 +26,9 @@ const StyledMenu = styled.nav`
         display: flex;
         gap: 32px;
     }
+
+    a {
+        font-size: 20px;
+        font-weight: 600;
+    }
 `;
