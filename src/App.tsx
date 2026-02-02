@@ -1,5 +1,5 @@
 import './App.css'
-import { Header } from './layout/header/Header';
+import { Header } from './layout/header/header/Header';
 import { Main } from './layout/header/sections/Main';
 import { Skills } from './layout/header/sections/skills/Skills';
 import { Experience } from './layout/header/sections/experience/Experience';

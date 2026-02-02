@@ -71,6 +71,6 @@ const ProjectTitle = styled.h3`
 
 const ProjectDescription = styled.p`
     font-size: 16px;
-    color: ${() => theme.colors.grey.hue4};
+    color: ${theme.colors.grey.hue500};
     line-height: 1.5;
 `;

@@ -63,6 +63,6 @@ const StyledAboutMe = styled.section`
 const AboutMeDescription = styled.p`
     line-height: 1.5;
     font-size: 16px;
-    color: ${() => theme.colors.grey.hue4};
+    color: ${theme.colors.grey.hue500};
     max-width: 610px;
 `;

@@ -70,7 +70,7 @@ const Field = styled.input`
 
 const Slogan = styled.p`
     font-size: 16px;
-    color: ${() => theme.colors.grey.hue4};
+    color: ${theme.colors.grey.hue500};
 `;
 
 const ContactText = styled.div`

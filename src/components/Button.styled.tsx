@@ -1,4 +1,5 @@
 import styled, { css } from 'styled-components';
+import { theme } from '../styles/Theme';
 
 type StyledBtnPropsType = {
     btnSize: 'sm' | 'md' | 'square';
@@ -14,6 +15,7 @@ export const StyledBtn = styled.button<StyledBtnPropsType>`
         props.btnSize === 'md' &&
         css<StyledBtnPropsType>`
             font-size: 20px;
+            font-weight: 600;
             padding: 14px 18px;
             color: #fff;
             background-color: #000;
@@ -39,4 +41,15 @@ export const StyledBtn = styled.button<StyledBtnPropsType>`
             background-color: #ffff;
             border-color: #000;
         `}
+
+    &:hover {
+        background-color: ${theme.colors.accent};
+        border-color: ${theme.colors.accent};
+    }
+
+    &:active {
+        background-color: ${theme.colors.primary.primaryBg};
+        color: ${theme.colors.primary.secondaryBg};
+        border-color: ${theme.colors.primary.secondaryBg};
+    }
 `;

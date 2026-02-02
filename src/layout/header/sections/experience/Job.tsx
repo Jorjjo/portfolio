@@ -35,7 +35,7 @@ const StyledJob = styled.div`
     display: flex;
     flex-direction: column;
     gap: 28px;
-    border: 1px solid ${() => theme.colors.grey.hue4};
+    border: 1px solid ${theme.colors.grey.hue500};
     border-radius: 10px;
     padding: 29px 24px;
 
@@ -53,13 +53,13 @@ const JobTitle = styled.h3`
 `;
 
 const JobDesccription = styled.p`
-    color: ${() => theme.colors.grey.hue3};
+    color: ${theme.colors.grey.hue300};
     font-size: 16px;
     line-height: 1.5;
 `;
 
 const JobPeriod = styled.span`
-    color: ${() => theme.colors.grey.hue3};
+    color: ${theme.colors.grey.hue300};
     font-size: 16px;
     font-weight: 600;
 `;

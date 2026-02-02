@@ -28,7 +28,7 @@ aside {
 
 html,
 body {
-    font-family: "Sora", sans-serif;
+    font-family: "Sora", system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif ,sans-serif;
     font-optical-sizing: auto;
     font-style: normal;
     letter-spacing: 0.035em;
@@ -40,6 +40,7 @@ body {
     -ms-text-size-adjust: 100%;
     -moz-text-size-adjust: 100%;
     -webkit-text-size-adjust: 100%;
+    -webkit-font-smoothing: antialiased;
     overflow-x: clip;
     overflow-y: initial;
 }
@@ -51,6 +52,7 @@ textarea {
     font-family: inherit;
     font-size: 100%;
     padding: 0;
+    border: none;
 
 }
 

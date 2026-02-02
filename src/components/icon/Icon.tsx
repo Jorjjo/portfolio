@@ -18,7 +18,7 @@ export function Icon(props: IconPropsType) {
                 height={props.height || '60'}
                 viewBox={props.viewBox || '0 0 60 60'}
                 stroke={props.stroke}
-                fill={props.fill}
+                fill={props.fill || 'transparent'}
             >
                 <use xlinkHref={`${iconsSprite}#${props.iconId}`}></use>
             </svg>
