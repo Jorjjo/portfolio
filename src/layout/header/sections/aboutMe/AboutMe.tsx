@@ -17,7 +17,7 @@ export function AboutMe() {
                         height='593'
                         viewBox='0 0 523 593'
                     />
-                    <div>
+                    <article>
                         <SectionTitle color='black'>
                             About <b>Me</b>
                         </SectionTitle>
@@ -49,7 +49,7 @@ export function AboutMe() {
                             share tech-related bites and build in public, or you
                             can follow me on GitHub.
                         </AboutMeDescription>
-                    </div>
+                    </article>
                 </FlexWrapper>
             </Container>
         </StyledAboutMe>

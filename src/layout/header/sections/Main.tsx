@@ -4,8 +4,10 @@ import { FlexWrapper } from '../../../components/FlexWrapper';
 import { Container } from '../../../components/Container';
 import styled from 'styled-components';
 import { theme } from '../../../styles/Theme';
-import { Socials } from '../../../components/mainSection/Socials';
+import { Socials } from '../../../components/Socials';
 import { SectionTitle } from '../../../components/SectionTitle';
+
+const socials = ['facebook', 'reddit', 'twitter', 'discord']
 
 export function Main() {
     return (
@@ -29,7 +31,7 @@ export function Main() {
                             since the 1500s, when an unknown printer took a
                             galley of type and scrambled it to specimen book.
                         </p>
-                        <Socials gap='32px'/>
+                        <Socials socialsItems={socials} />
                     </MainContent>
                     <Icon
                         iconId='banner'
@@ -44,19 +46,40 @@ export function Main() {
 }
 
 const StyledMain = styled.section`
-    background-color: ${() => theme.colors.primary.primaryBg};
+    background-color: ${theme.colors.primary.primaryBg};
+    height: 100vh;
+    display: flex;
 `;
 
 const MainContent = styled.div`
-    display: flex;
-    flex-direction: column;
-    gap: 32px;
     max-width: 586px;
     text-align: left;
+
+    p {
+        font-size: 16px;
+        color: ${theme.colors.grey.hue500};
+        margin: 32px 0 74px;
+        line-height: 1.5;
+
+    }
 `;
 
 const MainTitle = styled.h1`
     font-size: 48px;
     font-weight: 800;
     letter-spacing: -0.035em;
+/* 
+    span {
+        color: #ffffff;
+        text-shadow:
+            -2px -2px 0 ${theme.colors.accent},
+            2px -2px 0 ${theme.colors.accent},
+            -2px 2px 0 ${theme.colors.accent},
+            2px 2px 0 ${theme.colors.accent};
+    } */
+
+    span {
+        color: ${theme.colors.primary.primaryBg};
+        -webkit-text-stroke: 2px ${theme.colors.accent};
+    }
 `;

@@ -4,8 +4,10 @@ import { Container } from '../../../../components/Container';
 import { SectionTitle } from '../../../../components/SectionTitle';
 import { FlexWrapper } from '../../../../components/FlexWrapper';
 import { StyledBtn } from '../../../../components/Button.styled';
-import { Socials } from '../../../../components/mainSection/Socials';
+import { Socials } from '../../../../components/Socials';
 import { theme } from '../../../../styles/Theme';
+
+const socials = ['facebook', 'reddit', 'twitter', 'discord'];
 
 export function Contacts() {
     return (
@@ -24,11 +26,11 @@ export function Contacts() {
                             <StyledBtn type='submite' btnSize='md'>
                                 Get In Touch
                             </StyledBtn>
-                            <Socials gap='24px'/>
+                            <Socials socialsItems={socials} />
                         </FlexWrapper>
                     </StyledForm>
                     <ContactText>
-                        <FlexWrapper direction='column' gap='20px'>
+                        <FlexWrapper direction='column'>
                             <SectionTitle color='black'>
                                 <b>
                                     Let’s talk for
@@ -44,7 +46,9 @@ export function Contacts() {
                         </FlexWrapper>
 
                         <ContactInfo>
-                            <a href='mailto:myemail@gmail.com'>myemail@gmail.com</a>
+                            <a href='mailto:myemail@gmail.com'>
+                                myemail@gmail.com
+                            </a>
                             <a href='tel:+1234567890'>1234567890</a>
                         </ContactInfo>
                     </ContactText>
@@ -88,7 +92,7 @@ const ContactInfo = styled.div`
 
     a {
         font-size: 28px;
-        color: ${() => (theme.colors.primary.secondaryBg)};
+        color: ${() => theme.colors.primary.secondaryBg};
         font-weight: 600;
     }
 `;

@@ -19,7 +19,7 @@ export function Header() {
                     <HeaderMenu
                         menuItems={items}
                     />
-                    <StyledBtn as={'a'} btnSize='md'>
+                    <StyledBtn btnSize='md'>
                         <FlexWrapper gap='8px'>
                             <span>Resume</span>
                             <Icon

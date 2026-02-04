@@ -28,14 +28,15 @@ const StyledSkill = styled.div`
     align-items: center;
     justify-content: center;
     gap: 32px;
-    width: 186px;
+    max-width: 186px;
+    width: 100%;
     min-height: 186px;
-    border: 2px solid ${() => (theme.colors.primary.secondaryBg)};
+    border: 2px solid ${theme.colors.primary.secondaryBg};
     border-radius: 4px;
 `;
 
 const SkillTitle = styled.h3`
-    color: black;
+    color: ${theme.colors.primary.secondaryBg};
     font-size: 20px;
     font-weight: 700;
 `;

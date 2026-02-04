@@ -32,6 +32,7 @@ body {
     font-optical-sizing: auto;
     font-style: normal;
     letter-spacing: 0.035em;
+    line-height: 1.2;
     margin: 0;
     height: 100%;
     width: 100%;

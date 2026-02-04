@@ -16,11 +16,11 @@ export function Project(props: ProjectPropsType) {
     return (
         <StyledProject as={'a'} href={'#'}>
             <FlexWrapper
-                direction={props.flexDirection || 'row'}
+                direction={props.flexDirection}
                 justify='space-between'
                 align='center'
             >
-                <Image src={props.src} />
+                <Image src={props.src}/>
                 <ProjectText>
                     <ProjectNumber>{props.number}</ProjectNumber>
                     <ProjectTitle>{props.title}</ProjectTitle>
