@@ -1,13 +1,13 @@
 import './App.css'
-import { Header } from './layout/header/header/Header';
-import { Main } from './layout/header/sections/Main';
-import { Skills } from './layout/header/sections/skills/Skills';
-import { Experience } from './layout/header/sections/experience/Experience';
-import { AboutMe } from './layout/header/sections/aboutMe/AboutMe';
-import { Projects } from './layout/header/sections/projects/Projects';
-import { Testimonials } from './layout/header/sections/testimonials/Testimonials';
-import { Contacts } from './layout/header/sections/contacts/Contacts';
-import { Footer } from './layout/header/Footer';
+import { Header } from './layout/layout/header/Header';
+import { Main } from './layout/layout/main/Main';
+import { Skills } from './layout/layout/sections/skills/Skills';
+import { Experience } from './layout/layout/sections/experience/Experience';
+import { AboutMe } from './layout/layout/sections/aboutMe/AboutMe';
+import { Projects } from './layout/layout/sections/projects/Projects';
+import { Testimonials } from './layout/layout/sections/testimonials/Testimonials';
+import { Contacts } from './layout/layout/sections/contacts/Contacts';
+import { Footer } from './layout/layout/Footer';
 
 function App() {
     return (

@@ -83,6 +83,10 @@ const ContactText = styled.div`
     max-width: 600px;
     gap: 40px;
     text-align: left;
+
+    ${SectionTitle} {
+        margin: 0;
+    }
 `;
 
 const ContactInfo = styled.div`
@@ -92,7 +96,7 @@ const ContactInfo = styled.div`
 
     a {
         font-size: 28px;
-        color: ${() => theme.colors.primary.secondaryBg};
+        color: ${theme.colors.primary.secondaryBg};
         font-weight: 600;
     }
 `;

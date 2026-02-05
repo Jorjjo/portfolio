@@ -6,7 +6,7 @@ import { StyledBtn } from '../../../components/Button.styled';
 import { Container } from '../../../components/Container';
 import { FlexWrapper } from '../../../components/FlexWrapper';
 import { theme } from '../../../styles/Theme';
-import { HeaderMenu } from "../header/HeaderMenu";
+import { HeaderMenu } from "./HeaderMenu";
 
 const items = ['About Me', 'Skills', 'Projects', 'Contact Me'];
 

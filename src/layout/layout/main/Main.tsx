@@ -62,6 +62,10 @@ const MainContent = styled.div`
         line-height: 1.5;
 
     }
+
+    ${SectionTitle} {
+        margin: 0;
+    }
 `;
 
 const MainTitle = styled.h1`

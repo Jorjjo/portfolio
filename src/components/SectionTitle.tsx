@@ -11,6 +11,7 @@ export const SectionTitle = styled.h2<SectionTitlePropsType>`
     font-size: 48px;
     letter-spacing: -0.035em;
     line-height: 1.4;
-    margin: 20px 0;
+    padding: 20px 0;
+    margin-bottom: 20px;
     text-align: ${(props) => props.align || 'left'};
 `;
