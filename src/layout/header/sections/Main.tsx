@@ -68,8 +68,8 @@ const MainTitle = styled.h1`
     font-size: 48px;
     font-weight: 800;
     letter-spacing: -0.035em;
-/* 
-    span {
+
+    /* span {
         color: #ffffff;
         text-shadow:
             -2px -2px 0 ${theme.colors.accent},

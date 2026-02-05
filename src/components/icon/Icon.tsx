@@ -1,4 +1,3 @@
-import React from 'react';
 import iconsSprite from '../../assets/images/icons-sprite.svg';
 
 
@@ -11,7 +10,6 @@ type IconPropsType = {
 
 export function Icon(props: IconPropsType) {
     return (
-        <>
             <svg
                 width={props.width || '60'}
                 height={props.height || '60'}
@@ -19,6 +17,5 @@ export function Icon(props: IconPropsType) {
             >
                 <use xlinkHref={`${iconsSprite}#${props.iconId}`}></use>
             </svg>
-        </>
     );
 }

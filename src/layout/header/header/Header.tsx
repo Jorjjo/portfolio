@@ -15,20 +15,18 @@ export function Header() {
         <StyledHeader>
             <Container>
                 <FlexWrapper justify='space-between' align='center'>
-                    <Logo fill='black' />
+                    <Logo/>
                     <HeaderMenu
                         menuItems={items}
                     />
                     <StyledBtn btnSize='md'>
-                        <FlexWrapper gap='8px'>
-                            <span>Resume</span>
+                            Resume
                             <Icon
                                 iconId='download'
                                 width='20'
                                 height='20'
                                 viewBox='0 0 20 20'
                             />
-                        </FlexWrapper>
                     </StyledBtn>
                 </FlexWrapper>
             </Container>
@@ -37,11 +35,16 @@ export function Header() {
 }
 
 const StyledHeader = styled.header`
-    background-color: ${() => theme.colors.primary.primaryBg};
+    background-color: ${theme.colors.primary.primaryBg};
     padding: 24px 0;
     position: fixed;
     top: 0;
     left: 0;
     right: 0;
     z-index: 1000;
+
+    ${StyledBtn} {
+        display: flex;
+        gap: 8px;
+    }
 `;
