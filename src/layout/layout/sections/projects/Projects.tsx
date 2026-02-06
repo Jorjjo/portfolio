@@ -3,23 +3,24 @@ import { Container } from '../../../../components/Container';
 import styled from 'styled-components';
 import { theme } from '../../../../styles/Theme';
 import { SectionTitle } from '../../../../components/SectionTitle';
-import { Menu } from '../../../../components/menu/Menu';
 import { FlexWrapper } from '../../../../components/FlexWrapper';
 import { Project } from './Project';
 import crypto from '../../../../assets/images/crypto.webp';
 import ecom from '../../../../assets/images/ecom.webp';
 import website from '../../../../assets/images/website.webp';
+import { ProjectsTabs } from './ProjectsTabs';
 
-const tabs = ['ALL', 'LANDING PAGE', 'REACT', 'SPA'];
+
+const tabs = ['all', 'landing page', 'react', 'spa'];
 
 export function Projects() {
     return (
         <StyledProjects>
             <Container>
-                <SectionTitle color='white'>
+                <SectionTitle align='center' color='white'>
                     My <b>Projects</b>
                 </SectionTitle>
-                <Menu menuItems={tabs} />
+                <ProjectsTabs menuItems={tabs} />
                 <FlexWrapper direction='column' gap='20px'>
                     <Project
                         number='01'
@@ -47,5 +48,5 @@ export function Projects() {
 }
 
 const StyledProjects = styled.section`
-    background-color: ${() => theme.colors.primary.secondaryBg};
+    background-color: ${theme.colors.primary.secondaryBg};
 `;

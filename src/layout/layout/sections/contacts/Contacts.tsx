@@ -6,6 +6,7 @@ import { FlexWrapper } from '../../../../components/FlexWrapper';
 import { StyledBtn } from '../../../../components/Button.styled';
 import { Socials } from '../../../../components/Socials';
 import { theme } from '../../../../styles/Theme';
+import { TextDecoration } from '../../../../components/TextDecoration';
 
 const socials = ['facebook', 'reddit', 'twitter', 'discord'];
 
@@ -13,7 +14,7 @@ export function Contacts() {
     return (
         <StyledContacts>
             <Container>
-                <FlexWrapper justify='space-between' align='center'>
+                <FlexWrapper justify='space-between' align='center' gap='32px'>
                     <StyledForm>
                         <Field placeholder={'Your name*'} />
                         <Field placeholder={'Email*'} />
@@ -23,8 +24,8 @@ export function Contacts() {
                             as={'textarea'}
                         />
                         <FlexWrapper gap='24px'>
-                            <StyledBtn type='submite' btnSize='md'>
-                                Get In Touch
+                            <StyledBtn type={'submite'} btnSize='md'>
+                                get in touch
                             </StyledBtn>
                             <Socials socialsItems={socials} />
                         </FlexWrapper>
@@ -33,7 +34,8 @@ export function Contacts() {
                         <FlexWrapper direction='column'>
                             <SectionTitle color='black'>
                                 <b>
-                                    Let’s talk for
+                                    Let’s <TextDecoration>talk</TextDecoration>{' '}
+                                    for
                                     <br />
                                     Something special
                                 </b>
@@ -45,12 +47,10 @@ export function Contacts() {
                             </Slogan>
                         </FlexWrapper>
 
-                        <ContactInfo>
-                            <a href='mailto:myemail@gmail.com'>
-                                myemail@gmail.com
-                            </a>
-                            <a href='tel:+1234567890'>1234567890</a>
-                        </ContactInfo>
+                        <Link href='mailto:myemail@gmail.com'>
+                            myemail@gmail.com
+                        </Link>
+                        <Link href='tel:+1234567890'>1234567890</Link>
                     </ContactText>
                 </FlexWrapper>
             </Container>
@@ -61,27 +61,49 @@ export function Contacts() {
 const StyledContacts = styled.section``;
 
 const StyledForm = styled.form`
+    max-width: 500px;
+    width: 100%;
     display: flex;
     flex-direction: column;
     gap: 20px;
+
+    textarea {
+        height: 140px;
+    }
 `;
 
 const Field = styled.input`
-    padding: 18px 24px;
+    width: 100%;
+    line-height: 1.2;
+    padding: 16px 24px;
+    border: 1.5px solid ${theme.colors.primary.secondaryBg};
     border-radius: 4px;
-    max-width: 500px;
+
+    &::placeholder {
+        font-size: 16px;
+        color: ${theme.colors.grey.hue500};
+    }
+
+    &:focus {
+        border: 1.5px solid ${theme.colors.accent};
+    }
+
+    &:hover {
+        background-color: ${theme.colors.grey.hue100};
+
+        &::placeholder {
+            color: ${theme.colors.primary.neutral};
+        }
+    }
 `;
 
 const Slogan = styled.p`
-    font-size: 16px;
     color: ${theme.colors.grey.hue500};
+    margin-bottom: 40px;
 `;
 
 const ContactText = styled.div`
-    display: flex;
-    flex-direction: column;
     max-width: 600px;
-    gap: 40px;
     text-align: left;
 
     ${SectionTitle} {
@@ -89,14 +111,17 @@ const ContactText = styled.div`
     }
 `;
 
-const ContactInfo = styled.div`
-    display: flex;
-    flex-direction: column;
-    gap: 16px;
+const Link = styled.a`
+    display: block;
+    font-size: 28px;
+    color: ${theme.colors.primary.secondaryBg};
+    font-weight: 600;
 
-    a {
-        font-size: 28px;
-        color: ${theme.colors.primary.secondaryBg};
-        font-weight: 600;
+    & + a {
+        margin-top: 16px;
+    }
+
+    &:hover {
+        color: ${theme.colors.accent};
     }
 `;

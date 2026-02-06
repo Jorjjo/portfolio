@@ -15,7 +15,7 @@ export function Header() {
         <StyledHeader>
             <Container>
                 <FlexWrapper justify='space-between' align='center'>
-                    <Logo/>
+                    <Logo color={theme.colors.primary.secondaryBg}/>
                     <HeaderMenu
                         menuItems={items}
                     />

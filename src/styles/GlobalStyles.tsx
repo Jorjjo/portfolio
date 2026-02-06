@@ -1,4 +1,5 @@
 import { createGlobalStyle } from 'styled-components';
+import { theme } from './Theme';
 
 export const GlobalStyles = createGlobalStyle`
 *,
@@ -44,6 +45,11 @@ body {
     -webkit-font-smoothing: antialiased;
     overflow-x: clip;
     overflow-y: initial;
+}
+
+body::selection {
+    color: ${theme.colors.primary.primaryBg};
+    background-color: ${theme.colors.accent};
 }
 
 input,
@@ -97,5 +103,10 @@ h4 {
 
 section {
     padding: 60px 0;
+}
+
+p {
+    font-size: 16px;
+    line-height: 1.5;
 }
 `;

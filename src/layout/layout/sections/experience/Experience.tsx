@@ -14,7 +14,6 @@ export function Experience() {
                     My <b>Experience</b>
                 </SectionTitle>
                 <Jobs>
-                    {' '}
                     <FlexWrapper direction='column' gap='32px'>
                         <Job
                             iconId='google'

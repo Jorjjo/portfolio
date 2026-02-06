@@ -8,7 +8,7 @@ export function Testimonials() {
     return (
         <StyledTestimonials>
             <Container>
-                <SectionTitle color='black'>
+                <SectionTitle align='center' color='black'>
                     My <b>Testimonials</b>
                 </SectionTitle>
                 <Slider/>

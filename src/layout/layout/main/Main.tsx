@@ -6,6 +6,7 @@ import styled from 'styled-components';
 import { theme } from '../../../styles/Theme';
 import { Socials } from '../../../components/Socials';
 import { SectionTitle } from '../../../components/SectionTitle';
+import { TextDecoration } from '../../../components/TextDecoration';
 
 const socials = ['facebook', 'reddit', 'twitter', 'discord']
 
@@ -19,7 +20,7 @@ export function Main() {
                             Hello I’am <b>Flora Sheen.</b>
                         </SectionTitle>
                         <MainTitle>
-                            Frontend <span>Developer</span>
+                            Frontend <TextDecoration>Developer</TextDecoration>
                         </MainTitle>
                         <SectionTitle color='black'>
                             Based In <b>India</b>.
@@ -56,11 +57,8 @@ const MainContent = styled.div`
     text-align: left;
 
     p {
-        font-size: 16px;
         color: ${theme.colors.grey.hue500};
         margin: 32px 0 74px;
-        line-height: 1.5;
-
     }
 
     ${SectionTitle} {
@@ -72,18 +70,4 @@ const MainTitle = styled.h1`
     font-size: 48px;
     font-weight: 800;
     letter-spacing: -0.035em;
-
-    /* span {
-        color: #ffffff;
-        text-shadow:
-            -2px -2px 0 ${theme.colors.accent},
-            2px -2px 0 ${theme.colors.accent},
-            -2px 2px 0 ${theme.colors.accent},
-            2px 2px 0 ${theme.colors.accent};
-    } */
-
-    span {
-        color: ${theme.colors.primary.primaryBg};
-        -webkit-text-stroke: 2px ${theme.colors.accent};
-    }
 `;

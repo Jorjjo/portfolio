@@ -14,8 +14,8 @@ type JobPropsType = {
 export function Job(props: JobPropsType) {
     return (
         <StyledJob>
-            <FlexWrapper justify='space-between'>
-                <div>
+            <FlexWrapper align='center' justify='space-between'>
+                <FlexWrapper align='center' gap='30px'>
                     <Icon
                         iconId={props.iconId}
                         width='32'
@@ -23,7 +23,7 @@ export function Job(props: JobPropsType) {
                         viewBox='0 0 32 32'
                     />
                     <JobTitle>{props.jobTitle}</JobTitle>
-                </div>
+                </FlexWrapper>
                 <JobPeriod>{props.jobPeriod}</JobPeriod>
             </FlexWrapper>
             <JobDesccription>{props.jobDesc}</JobDesccription>
@@ -38,12 +38,6 @@ const StyledJob = styled.div`
     border: 1px solid ${theme.colors.grey.hue500};
     border-radius: 10px;
     padding: 29px 24px;
-
-    div {
-        display: flex;
-        align-items: center;
-        gap: 30px;
-    }
 `;
 
 const JobTitle = styled.h3`
@@ -54,8 +48,6 @@ const JobTitle = styled.h3`
 
 const JobDesccription = styled.p`
     color: ${theme.colors.grey.hue300};
-    font-size: 16px;
-    line-height: 1.5;
 `;
 
 const JobPeriod = styled.span`

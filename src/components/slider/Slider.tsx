@@ -6,11 +6,20 @@ import { FlexWrapper } from '../FlexWrapper';
 export function Slider() {
     return (
         <TestimonialsSlider>
-            <FlexWrapper justify='space-between' align='center'>
-                <Slide />
-                <Slide />
-                <Slide />
-            </FlexWrapper>           
+            <FlexWrapper justify='space-between' align='center' gap='24px'>
+                <Slide
+                    name='Evren Shah'
+                    text='I recently had to jump on 10+ different calls across eight different countries to find the right owner.'
+                />
+                <Slide
+                    name='Flora Sheen'
+                    text='I recently had to jump on 10+ different calls across eight different countries to find the right owner. I recently had to jump on 10+ different calls across eight different countries to find the right owner.'
+                />
+                <Slide
+                    name='Evren Shah'
+                    text='I recently had to jump on 10+ different calls across eight different countries to find the right owner.'
+                />
+            </FlexWrapper>
         </TestimonialsSlider>
     );
 }

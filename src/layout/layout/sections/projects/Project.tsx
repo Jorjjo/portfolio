@@ -14,13 +14,14 @@ type ProjectPropsType = {
 
 export function Project(props: ProjectPropsType) {
     return (
-        <StyledProject as={'a'} href={'#'}>
+        <StyledProject href={'#'}>
             <FlexWrapper
                 direction={props.flexDirection}
                 justify='space-between'
                 align='center'
+                gap='20px'
             >
-                <Image src={props.src}/>
+                <Image src={props.src} />
                 <ProjectText>
                     <ProjectNumber>{props.number}</ProjectNumber>
                     <ProjectTitle>{props.title}</ProjectTitle>
@@ -37,14 +38,11 @@ export function Project(props: ProjectPropsType) {
     );
 }
 
-const StyledProject = styled.div`
-    padding: 59px 0;
-`;
-
 const ProjectNumber = styled.span`
-    color: ${() => theme.colors.primary.primaryBg};
+    color: ${theme.colors.primary.primaryBg};
     font-size: 48px;
     font-weight: 800;
+    transition: 0.3s;
 `;
 
 const Image = styled.img`
@@ -52,6 +50,7 @@ const Image = styled.img`
     min-height: 398px;
     border-radius: 18px;
     object-fit: cover;
+    transition: transform 0.5s;
 `;
 
 const ProjectText = styled.div`
@@ -63,14 +62,36 @@ const ProjectText = styled.div`
 `;
 
 const ProjectTitle = styled.h3`
-    color: ${() => theme.colors.primary.primaryBg};
+    color: ${theme.colors.primary.primaryBg};
     font-size: 32px;
     font-weight: 700;
     letter-spacing: -0.035em;
+    transition: 0.3s;
 `;
 
 const ProjectDescription = styled.p`
-    font-size: 16px;
     color: ${theme.colors.grey.hue500};
-    line-height: 1.5;
+    transition: 0.3s;
+`;
+
+const StyledProject = styled.a`
+    padding: 60px 0;
+    color: ${theme.colors.primary.primaryBg};
+    transition: 0.3s;
+
+    &:hover {
+        color: ${theme.colors.accent};
+
+        ${ProjectNumber}, ${ProjectTitle} {
+            color: ${theme.colors.accent};
+        }
+
+        ${ProjectDescription} {
+            color: ${theme.colors.grey.hue300};
+        }
+
+        ${Image} {
+            transform: scale(1.02);
+        }
+    }
 `;
