@@ -1,6 +1,5 @@
-import React from 'react';
 import styled from 'styled-components';
-import { theme } from '../../../styles/Theme';
+import { theme } from '../../../../styles/Theme';
 
 type MenuPropsType = {
     menuItems: Array<string>;
@@ -8,7 +7,7 @@ type MenuPropsType = {
 
 export function HeaderMenu(props: MenuPropsType) {
     return (
-        <StyleHeaderMenu>
+        <StyledHeaderMenu>
             <ul>
                 {props.menuItems.map((item, index) => {
                     return (
@@ -26,14 +25,18 @@ export function HeaderMenu(props: MenuPropsType) {
                     );
                 })}
             </ul>
-        </StyleHeaderMenu>
+        </StyledHeaderMenu>
     );
 }
 
-const StyleHeaderMenu = styled.nav`
+const StyledHeaderMenu = styled.nav`
     ul {
         display: flex;
         gap: 32px;
+    }
+
+    @media ${theme.media.md} {
+        display: none;
     }
 `;
 
@@ -80,7 +83,6 @@ const ListItem = styled.li`
     }
 
     &:hover {
-
         &::before {
             transform: scale(1);
         }

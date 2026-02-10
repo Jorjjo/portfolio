@@ -103,6 +103,10 @@ h4 {
 
 section {
     padding: 60px 0;
+
+    @media ${theme.media.md} {
+        padding: 40px 0;
+    }
 }
 
 p {

@@ -15,4 +15,9 @@ export const theme = {
         error: '#ef4444',
         accent: '#8296E6',
     },
+
+    media: {
+        md: 'screen and (max-width: 900px)',
+        sm: 'screen and (max-width: 576px)',
+    },
 };

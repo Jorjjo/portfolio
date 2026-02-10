@@ -46,7 +46,6 @@ export const StyledBtn = styled.button<StyledBtnPropsType>`
         color: ${theme.colors.primary.primaryBg};
         background-color: ${theme.colors.accent};
         border-color: ${theme.colors.accent};
-        /* transition: 0.2s; */
     }
 
     &:active {
