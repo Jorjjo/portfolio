@@ -4,7 +4,6 @@ type IconPropsType = {
     iconId: string;
     width?: string;
     height?: string;
-    viewBox?: string;
 };
 
 export function Icon(props: IconPropsType) {

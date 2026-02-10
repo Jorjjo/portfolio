@@ -16,7 +16,7 @@ export function Main() {
                 <FlexWrapper
                     justify='center'
                     align='center'
-                    wrap='wrap-reverse'
+                    md={{ wrap: 'wrap-reverse' }}
                 >
                     <MainContent>
                         <SectionTitle color='black'>
@@ -46,9 +46,9 @@ export function Main() {
 
 const StyledMain = styled.section`
     background-color: ${theme.colors.primary.primaryBg};
-    height: 100vh;
-    display: flex;
-    outline: 1px solid red;
+    /* height: 100vh;
+    display: flex; */
+    /* outline: 1px solid red; */
 
     @media ${theme.media.md} {
         height: fit-content;
@@ -56,8 +56,12 @@ const StyledMain = styled.section`
 `;
 
 const MainContent = styled.div`
+    width: 50%;
     max-width: 586px;
     text-align: left;
+    @media ${theme.media.md} {
+        width: 100%;
+    }
 
     p {
         color: ${theme.colors.grey.hue500};

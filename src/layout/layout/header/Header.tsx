@@ -25,7 +25,6 @@ export function Header() {
                             iconId='download'
                             width='20'
                             height='20'
-                            viewBox='0 0 20 20'
                         />
                     </DesktopResumeBtn>
                 </FlexWrapper>
@@ -35,7 +34,7 @@ export function Header() {
 }
 
 const StyledHeader = styled.header`
-    outline: 1px solid red;
+    /* outline: 1px solid red; */
     background-color: ${theme.colors.primary.primaryBg};
     padding: 24px 0;
     position: fixed;

@@ -19,7 +19,6 @@ export function Slide(props: SlideProps) {
                             iconId='quote'
                             width='13'
                             height='10'
-                            viewBox='0 0 13 10'
                         />
                     </div>
                     <UserIcon src={props.userIcon} />

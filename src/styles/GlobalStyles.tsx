@@ -109,6 +109,15 @@ section {
     }
 }
 
+section:first-of-type {
+    padding: 0;
+    margin: 105px 0 60px;
+
+    @media ${theme.media.md} {
+        margin: 105px 0 40px
+    }
+}
+
 p {
     font-size: 16px;
     line-height: 1.5;

@@ -15,7 +15,6 @@ export function AboutMe() {
                         iconId='aboutMe'
                         width='523'
                         height='593'
-                        viewBox='0 0 523 593'
                     />
                     <article>
                         <SectionTitle color='black'>

@@ -20,7 +20,6 @@ export function Job(props: JobPropsType) {
                         iconId={props.iconId}
                         width='32'
                         height='32'
-                        viewBox='0 0 32 32'
                     />
                     <JobTitle>{props.jobTitle}</JobTitle>
                 </FlexWrapper>
