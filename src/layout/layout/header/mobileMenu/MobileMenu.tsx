@@ -88,15 +88,15 @@ const MobileMenuPopUp = styled.div<{ isOpen: boolean }>`
 
 const BurgerButton = styled.button<{ isOpen: boolean }>`
     position: fixed;
-    top: 24px;
+    top: 20px;
     right: 32px;
-    width: 36px;
-    height: 36px;
+    width: 32px;
+    height: 32px;
     z-index: 99999;
 
     span {
         display: block;
-        width: 36px;
+        width: 32px;
         height: 3px;
         background-color: ${theme.colors.primary.secondaryBg};
         position: absolute;
@@ -110,7 +110,7 @@ const BurgerButton = styled.button<{ isOpen: boolean }>`
         &::before {
             content: '';
             display: block;
-            width: 36px;
+            width: 32px;
             height: 3px;
             background-color: ${theme.colors.primary.secondaryBg};
             position: absolute;
@@ -125,7 +125,7 @@ const BurgerButton = styled.button<{ isOpen: boolean }>`
         &::after {
             content: '';
             display: block;
-            width: 36px;
+            width: 32px;
             height: 3px;
             background-color: ${theme.colors.primary.secondaryBg};
             position: absolute;

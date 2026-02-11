@@ -104,7 +104,7 @@ h4 {
 section {
     padding: 60px 0;
 
-    @media ${theme.media.md} {
+    @media ${theme.media.sm} {
         padding: 40px 0;
     }
 }
@@ -121,5 +121,11 @@ section:first-of-type {
 p {
     font-size: 16px;
     line-height: 1.5;
+    letter-spacing: 0.035em;
+}
+
+b {
+    font-weight: 800;
 }
 `;
+

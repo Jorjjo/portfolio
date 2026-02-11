@@ -14,7 +14,12 @@ export function Skills() {
                     My <b>Skills</b>
                 </SectionTitle>
                 <SkillsWrapper>
-                    <FlexWrapper justify='center' wrap='wrap' gap='40px 70px'>
+                    <FlexWrapper
+                        justify='center'
+                        wrap='wrap'
+                        gap='40px 70px'
+                        md={{ gap: '20px' }}
+                    >
                         <Skill iconId='git' skillTitle='Git' />
                         <Skill iconId='react' skillTitle='React' />
                         <Skill iconId='js' skillTitle='Javascript' />
@@ -31,10 +36,12 @@ export function Skills() {
 
 const StyledSkills = styled.section`
     background-color: ${() => theme.colors.primary.primaryBg};
-    padding: 60px 0;
 `;
 
 const SkillsWrapper = styled.div`
     padding: 20px 0;
-    margin-top: 20px;
-`
+
+    @media ${theme.media.md} {
+       padding: 0;
+    }
+`;

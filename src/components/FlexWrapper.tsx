@@ -14,6 +14,13 @@ type FlexWrapperPropsType = {
         wrap?: string;
         gap?: string;
     };
+    sm?: {
+        direction?: string;
+        justify?: string;
+        align?: string;
+        wrap?: string;
+        gap?: string;
+    };
 };
 
 export const FlexWrapper = styled.div<FlexWrapperPropsType>`
@@ -31,5 +38,13 @@ export const FlexWrapper = styled.div<FlexWrapperPropsType>`
         align-items: ${(props) => props.md?.align};
         flex-wrap: ${(props) => props.md?.wrap};
         gap: ${(props) => props.md?.gap};
+    }
+
+    @media ${theme.media.sm} {
+        flex-direction: ${(props) => props.sm?.direction};
+        justify-content: ${(props) => props.sm?.justify};
+        align-items: ${(props) => props.sm?.align};
+        flex-wrap: ${(props) => props.sm?.wrap};
+        gap: ${(props) => props.sm?.gap};
     }
 `;

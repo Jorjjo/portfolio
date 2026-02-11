@@ -6,6 +6,8 @@ import { theme } from '../../../styles/Theme';
 import { Socials } from '../../../components/Socials';
 import { SectionTitle } from '../../../components/SectionTitle';
 import { TextDecoration } from '../../../components/TextDecoration';
+import { font } from '../../../styles/Common';
+import { IconWrapper } from '../../../components/icon/IconWrapper';
 
 const socials = ['facebook', 'reddit', 'twitter', 'discord'];
 
@@ -19,15 +21,15 @@ export function Main() {
                     md={{ wrap: 'wrap-reverse' }}
                 >
                     <MainContent>
-                        <SectionTitle color='black'>
+                        <MainSectionTitle color='black'>
                             Hello I’am <b>Flora Sheen.</b>
-                        </SectionTitle>
+                        </MainSectionTitle>
                         <MainTitle>
                             Frontend <TextDecoration>Developer</TextDecoration>
                         </MainTitle>
-                        <SectionTitle color='black'>
+                        <MainSectionTitle color='black'>
                             Based In <b>India</b>.
-                        </SectionTitle>
+                        </MainSectionTitle>
                         <p>
                             I'm Flora Sheen Lorem Ipsum is simply dummy text of
                             the printing and typesetting industry. Lorem Ipsum
@@ -37,7 +39,14 @@ export function Main() {
                         </p>
                         <Socials socialsItems={socials} />
                     </MainContent>
-                    <Icon iconId='banner' width='630' height='630' />
+                    <IconWrapper
+                        width='630'
+                        height='630'
+                        md={{ width: '500', height: '500' }}
+                        sm={{ width: '332', height: '332' }}
+                    >
+                        <Icon iconId='banner' width='100%' height='100%' />
+                    </IconWrapper>
                 </FlexWrapper>
             </Container>
         </StyledMain>
@@ -50,31 +59,45 @@ const StyledMain = styled.section`
     display: flex; */
     /* outline: 1px solid red; */
 
-    @media ${theme.media.md} {
+    /* @media ${theme.media.md} {
         height: fit-content;
-    }
+    } */
 `;
 
 const MainContent = styled.div`
     width: 50%;
     max-width: 586px;
     text-align: left;
-    @media ${theme.media.md} {
-        width: 100%;
-    }
 
     p {
         color: ${theme.colors.grey.hue500};
         margin: 32px 0 74px;
+
+        @media ${theme.media.md} {
+            margin: 32px 0;
+        }
     }
 
     ${SectionTitle} {
         margin: 0;
     }
+
+    @media ${theme.media.md} {
+        width: 100%;
+    }
 `;
 
 const MainTitle = styled.h1`
-    font-size: 48px;
-    font-weight: 800;
+    ${font({ Fmax: 48, Fmin: 28, weight: 800 })}
     letter-spacing: -0.035em;
+    margin: 20px 0;
+
+    @media ${theme.media.sm} {
+        margin: 12px 0;
+    }
+`;
+
+const MainSectionTitle = styled(SectionTitle)`
+    padding: 0;
+
 `;

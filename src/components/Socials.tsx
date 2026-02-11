@@ -12,7 +12,7 @@ export function Socials(props: SocialsPropsType) {
             <ul>
                 {props.socialsItems.map((item, index) => {
                     return (
-                        <StyledBtn as={'li'} btnSize='square'  key={index}>
+                        <StyledBtn as={'li'} btnSize='square' key={index}>
                             <a>
                                 <Icon
                                     iconId={item}

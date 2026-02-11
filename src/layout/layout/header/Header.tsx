@@ -21,11 +21,7 @@ export function Header() {
                     <MobileMenu menuItems={items} />
                     <DesktopResumeBtn btnSize='md'>
                         Resume
-                        <Icon
-                            iconId='download'
-                            width='20'
-                            height='20'
-                        />
+                        <Icon iconId='download' width='20' height='20' />
                     </DesktopResumeBtn>
                 </FlexWrapper>
             </Container>
@@ -42,11 +38,16 @@ const StyledHeader = styled.header`
     left: 0;
     right: 0;
     z-index: 1000;
+
+    @media ${theme.media.sm} {
+        padding: 16px 0;
+    }
 `;
 
 const DesktopResumeBtn = styled(StyledBtn)`
     display: flex;
     gap: 8px;
+
     @media ${theme.media.md} {
         display: none;
     }

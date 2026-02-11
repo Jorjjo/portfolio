@@ -2,6 +2,7 @@ import React from 'react';
 import styled from 'styled-components';
 import { Icon } from '../../../../components/icon/Icon';
 import { theme } from '../../../../styles/Theme';
+import { FlexWrapper } from '../../../../components/FlexWrapper';
 
 type SkillPropsType = {
     iconId: string;
@@ -11,27 +12,35 @@ type SkillPropsType = {
 export function Skill(props: SkillPropsType) {
     return (
         <StyledSkill>
-            <Icon
-                iconId={props.iconId}
-                width='56'
-                height='56'
-            />
-            <SkillTitle>{props.skillTitle}</SkillTitle>
+            <FlexWrapper
+                direction='column'
+                align='center'
+                justify='center'
+                gap='32px'
+            >
+                <Icon iconId={props.iconId} width='56' height='56' />
+                <SkillTitle>{props.skillTitle}</SkillTitle>
+            </FlexWrapper>
         </StyledSkill>
     );
 }
 
 const StyledSkill = styled.div`
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    gap: 32px;
     max-width: 186px;
     width: 100%;
     min-height: 186px;
     border: 2px solid ${theme.colors.primary.secondaryBg};
     border-radius: 4px;
+
+    /* @media ${theme.media.md} {
+        max-width: 160px;
+        min-height: 160px;
+    } */
+
+    @media ${theme.media.sm} {
+        max-width: 160px;
+        min-height: 160px;
+    }
 `;
 
 const SkillTitle = styled.h3`

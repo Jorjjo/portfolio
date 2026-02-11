@@ -22,6 +22,10 @@ export const StyledBtn = styled.button<StyledBtnPropsType>`
             padding: 14px 18px;
             color: #fff;
             background-color: ${theme.colors.primary.secondaryBg};
+            @media ${theme.media.md} {
+                font-size: 16px;
+                padding: 12px 14px;
+            }
         `}
 
     ${(props) =>
@@ -40,7 +44,14 @@ export const StyledBtn = styled.button<StyledBtnPropsType>`
             height: 56px;
             padding: 16px 16px;
             background-color: ${theme.colors.primary.primaryBg};
+            @media ${theme.media.md} {
+                width: 48px;
+                height: 48px;
+                padding: 12px 12px;
+            }
         `}
+
+        
 
     &:hover {
         color: ${theme.colors.primary.primaryBg};

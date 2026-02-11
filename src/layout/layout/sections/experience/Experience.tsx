@@ -46,4 +46,8 @@ const StyledExperince = styled.section`
 
 const Jobs = styled.article`
     padding: 40px 0;
-`
+
+    @media ${theme.media.md} {
+        padding: 0;
+    }
+`;

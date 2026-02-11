@@ -9,10 +9,11 @@ type IconPropsType = {
 export function Icon(props: IconPropsType) {
     return (
         <svg
-            width={props.width || '60'}
-            height={props.height || '60'}
+            width={props.width}
+            height={props.height}
         >
             <use xlinkHref={`${iconsSprite}#${props.iconId}`}></use>
         </svg>
+        
     );
 }
