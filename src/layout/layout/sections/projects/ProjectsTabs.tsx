@@ -1,5 +1,6 @@
 import styled from 'styled-components';
 import { theme } from '../../../../styles/Theme';
+import { font } from '../../../../styles/Common';
 
 type TabsPropsType = {
     menuItems: Array<string>;
@@ -27,6 +28,10 @@ const StyledTabs = styled.nav`
         display: flex;
         gap: 23px;
         justify-content: center;
+
+        @media ${theme.media.sm} {
+            gap: 13px;
+        }
     }
 `;
 
@@ -38,11 +43,10 @@ const TabItem = styled.li`
 
 const Link = styled.a`
     color: ${theme.colors.primary.primaryBg};
-    font-size: 16px;
-    font-weight: 600;
+    ${font({ Fmax: 16, Fmin: 14, weight: 600 })}
     text-transform: uppercase;
-    padding: 10px;
     z-index: 1;
+    white-space: nowrap;
 
     position: relative;
 
@@ -52,9 +56,9 @@ const Link = styled.a`
         content: '';
         display: inline-block;
         height: 10px;
-        bottom: 8px;
-        left: 0;
-        right: 0;
+        bottom: -2px;
+        left: -2px;
+        right: -2px;
         background-color: ${theme.colors.accent};
         z-index: -1;
     }

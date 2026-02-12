@@ -5,17 +5,25 @@ import { theme } from '../../../../styles/Theme';
 import { SectionTitle } from '../../../../components/SectionTitle';
 import { Icon } from '../../../../components/icon/Icon';
 import { FlexWrapper } from '../../../../components/FlexWrapper';
+import { IconWrapper } from '../../../../components/icon/IconWrapper';
 
 export function AboutMe() {
     return (
         <StyledAboutMe>
             <Container>
-                <FlexWrapper justify='space-between' gap='32px'>
-                    <Icon
-                        iconId='aboutMe'
+                <FlexWrapper
+                    justify='space-around'
+                    gap='20px'
+                    wrap='wrap'
+                >
+                    <IconWrapper
                         width='523'
                         height='593'
-                    />
+                        sm={{ width: '343', height: '374' }}
+                    >
+                        <Icon iconId='aboutMe' width='100%' height='!00%' />
+                    </IconWrapper>
+
                     <article>
                         <SectionTitle color='black'>
                             About <b>Me</b>

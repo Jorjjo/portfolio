@@ -3,6 +3,7 @@ import styled from 'styled-components';
 import { FlexWrapper } from '../../../../components/FlexWrapper';
 import { Icon } from '../../../../components/icon/Icon';
 import { theme } from '../../../../styles/Theme';
+import { font } from '../../../../styles/Common';
 
 type ProjectPropsType = {
     number: string;
@@ -19,18 +20,16 @@ export function Project(props: ProjectPropsType) {
                 direction={props.flexDirection}
                 justify='space-between'
                 align='center'
-                gap='20px'
+                gap='28px'
+                wrap='wrap'
+                md={{justify: 'center'}}
             >
                 <Image src={props.src} />
                 <ProjectText>
                     <ProjectNumber>{props.number}</ProjectNumber>
                     <ProjectTitle>{props.title}</ProjectTitle>
                     <ProjectDescription>{props.desc}</ProjectDescription>
-                    <Icon
-                        iconId='readMore'
-                        width='20'
-                        height='20'
-                    />
+                    <Icon iconId='readMore' width='20' height='20' />
                 </ProjectText>
             </FlexWrapper>
         </StyledProject>
@@ -39,14 +38,14 @@ export function Project(props: ProjectPropsType) {
 
 const ProjectNumber = styled.span`
     color: ${theme.colors.primary.primaryBg};
-    font-size: 48px;
-    font-weight: 800;
+    ${font({ Fmax: 48, Fmin: 24, weight: 800 })}
     transition: 0.3s;
 `;
 
 const Image = styled.img`
     max-width: 530px;
-    min-height: 398px;
+    min-height: 400px;
+    width: 100%;
     border-radius: 18px;
     object-fit: cover;
     transition: transform 0.5s;
@@ -55,15 +54,21 @@ const Image = styled.img`
 const ProjectText = styled.div`
     display: flex;
     flex-direction: column;
-    gap: 28px;
-    max-width: 582px;
+    gap: 30px;
+    max-width: 580px;
+    width: 300px;
     text-align: left;
+    flex-grow: 1;
+
+    @media ${theme.media.md} {
+        gap: 28px;
+        max-width: 530px;
+    }
 `;
 
 const ProjectTitle = styled.h3`
     color: ${theme.colors.primary.primaryBg};
-    font-size: 32px;
-    font-weight: 700;
+    ${font({ Fmax: 32, Fmin: 20, weight: 700 })}
     letter-spacing: -0.035em;
     transition: 0.3s;
 `;
@@ -92,5 +97,9 @@ const StyledProject = styled.a`
         ${Image} {
             transform: scale(1.02);
         }
+    }
+
+    @media ${theme.media.sm} {
+        padding: 0;
     }
 `;
