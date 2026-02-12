@@ -9,7 +9,7 @@ export const StyledBtn = styled.button<StyledBtnPropsType>`
     border: 2px solid;
     border-radius: 4px;
     line-height: 1.2;
-    letter-spacing: 0.035em;
+    letter-spacing: 0.02em;
     text-transform: capitalize;
     border-color: ${theme.colors.primary.secondaryBg};
     font-weight: 600;
@@ -22,7 +22,7 @@ export const StyledBtn = styled.button<StyledBtnPropsType>`
             padding: 14px 18px;
             color: #fff;
             background-color: ${theme.colors.primary.secondaryBg};
-            @media ${theme.media.md} {
+            @media ${theme.media.sm} {
                 font-size: 16px;
                 padding: 12px 14px;
             }
@@ -44,7 +44,7 @@ export const StyledBtn = styled.button<StyledBtnPropsType>`
             height: 56px;
             padding: 16px 16px;
             background-color: ${theme.colors.primary.primaryBg};
-            @media ${theme.media.md} {
+            @media ${theme.media.sm} {
                 width: 48px;
                 height: 48px;
                 padding: 12px 12px;

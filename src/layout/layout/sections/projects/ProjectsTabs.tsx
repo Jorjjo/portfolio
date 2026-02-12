@@ -23,15 +23,13 @@ export function ProjectsTabs(props: TabsPropsType) {
 }
 
 const StyledTabs = styled.nav`
-    margin-bottom: 20px;
     ul {
         display: flex;
-        gap: 23px;
-        justify-content: center;
-
-        @media ${theme.media.sm} {
-            gap: 13px;
-        }
+        /* gap: 23px; */
+        justify-content: space-between;
+        max-width: 352px;
+        width: 100%;
+        margin: 0 auto  40px;
     }
 `;
 
@@ -57,8 +55,8 @@ const Link = styled.a`
         display: inline-block;
         height: 10px;
         bottom: -2px;
-        left: -2px;
-        right: -2px;
+        left: -3px;
+        right: -3px;
         background-color: ${theme.colors.accent};
         z-index: -1;
     }

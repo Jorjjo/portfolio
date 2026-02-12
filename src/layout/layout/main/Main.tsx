@@ -89,7 +89,7 @@ const MainContent = styled.div`
 
 const MainTitle = styled.h1`
     ${font({ Fmax: 48, Fmin: 28, weight: 800 })}
-    letter-spacing: -0.035em;
+    letter-spacing: -0.02em;
     margin: 20px 0;
 
     @media ${theme.media.sm} {

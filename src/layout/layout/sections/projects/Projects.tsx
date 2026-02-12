@@ -21,7 +21,7 @@ export function Projects() {
                     My <b>Projects</b>
                 </SectionTitle>
                 <ProjectsTabs menuItems={tabs} />
-                <FlexWrapper direction='column' gap='20px'>
+                <FlexWrapper direction='column' gap='28px'>
                     <Project
                         number='01'
                         src={crypto}
@@ -29,7 +29,6 @@ export function Projects() {
                         desc='Im Flora Sheen Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industrys standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to specimen book.'
                     />
                     <Project
-                        flexDirection='row-reverse'
                         number='02'
                         src={ecom}
                         title='Euphoria - Ecommerce (Apparels) Website Template'

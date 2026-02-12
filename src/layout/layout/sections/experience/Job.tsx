@@ -44,7 +44,7 @@ const JobTitle = styled.h3`
     ${font({ Fmax: 24, Fmin: 20, weight: 600 })}
     color: ${() => theme.colors.primary.primaryBg};
     text-align: left;
-    letter-spacing: -0.035em;
+    letter-spacing: -0.02em;
 `;
 
 const JobDesccription = styled.p`
@@ -55,4 +55,5 @@ const JobPeriod = styled.span`
     color: ${theme.colors.grey.hue300};
     font-size: 16px;
     font-weight: 600;
+    letter-spacing: -0.02em;
 `;

@@ -7,6 +7,7 @@ import { StyledBtn } from '../../../../components/Button.styled';
 import { Socials } from '../../../../components/Socials';
 import { theme } from '../../../../styles/Theme';
 import { TextDecoration } from '../../../../components/TextDecoration';
+import { font } from '../../../../styles/Common';
 
 const socials = ['facebook', 'reddit', 'twitter', 'discord'];
 
@@ -14,7 +15,12 @@ export function Contacts() {
     return (
         <StyledContacts>
             <Container>
-                <FlexWrapper justify='space-between' align='center' gap='32px'>
+                <FlexWrapper
+                    justify='space-around'
+                    align='center'
+                    gap='32px'
+                    wrap='wrap'
+                >
                     <StyledForm>
                         <Field placeholder={'Your name*'} />
                         <Field placeholder={'Email*'} />
@@ -23,7 +29,7 @@ export function Contacts() {
                             placeholder={'How can I help?*'}
                             as={'textarea'}
                         />
-                        <FlexWrapper gap='24px'>
+                        <FlexWrapper gap='24px' wrap='wrap'>
                             <StyledBtn type={'submite'} btnSize='md'>
                                 get in touch
                             </StyledBtn>
@@ -46,7 +52,6 @@ export function Contacts() {
                                 memorable interactive experiences.
                             </Slogan>
                         </FlexWrapper>
-
                         <Link href='mailto:myemail@gmail.com'>
                             myemail@gmail.com
                         </Link>
@@ -104,18 +109,24 @@ const Slogan = styled.p`
 
 const ContactText = styled.div`
     max-width: 600px;
+    width: 300px;
+    flex-grow: 1;
     text-align: left;
 
     ${SectionTitle} {
         margin: 0;
+        white-space: normal;
+    }
+
+    @media ${theme.media.md} {
+        max-width: 500px;
     }
 `;
 
 const Link = styled.a`
+    ${font({ Fmax: 28, Fmin: 20, weight: 600 })}
     display: block;
-    font-size: 28px;
     color: ${theme.colors.primary.secondaryBg};
-    font-weight: 600;
 
     & + a {
         margin-top: 16px;

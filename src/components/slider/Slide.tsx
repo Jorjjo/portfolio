@@ -102,6 +102,7 @@ const UserName = styled.span`
 
 const StyledSlide = styled.div`
     max-width: 370px;
+    width: 100%;
     padding: 40px;
     border-radius: 20px;
     box-shadow:

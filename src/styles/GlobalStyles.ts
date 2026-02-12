@@ -29,10 +29,11 @@ aside {
 
 html,
 body {
+    min-width: 360px;
     font-family: "Sora", system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif ,sans-serif;
     font-optical-sizing: auto;
     font-style: normal;
-    letter-spacing: 0.035em;
+    letter-spacing: 0.02em;
     line-height: 1.2;
     margin: 0;
     height: 100%;
@@ -121,7 +122,7 @@ section:first-of-type {
 p {
     font-size: 16px;
     line-height: 1.5;
-    letter-spacing: 0.035em;
+    letter-spacing: 0.02em;
 }
 
 b {

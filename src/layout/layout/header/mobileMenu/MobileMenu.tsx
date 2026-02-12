@@ -143,7 +143,7 @@ const BurgerButton = styled.button<{ isOpen: boolean }>`
 const Link = styled.a`
     font-size: 20px;
     font-weight: 600;
-    letter-spacing: -0.035em;
+    letter-spacing: -0.02em;
     color: ${theme.colors.primary.secondaryBg};
 `;
 

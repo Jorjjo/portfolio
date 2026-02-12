@@ -19,5 +19,6 @@ export const theme = {
     media: {
         md: 'screen and (max-width: 900px)',
         sm: 'screen and (max-width: 576px)',
+        lg: 'screen and  (min-width: 1140px)'
     },
 };
